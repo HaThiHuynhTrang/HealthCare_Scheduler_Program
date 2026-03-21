@@ -15,10 +15,7 @@ PROJECT SETUP GUIDE - HEALTHCARE BOOKING SYSTEM
 
 ---
 
-Mở terminal tại thư mục project và chạy:
 
-npm init -y
-npm install express mysql2 cors
 
 ---
 
