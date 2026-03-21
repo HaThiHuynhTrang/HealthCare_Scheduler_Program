@@ -47,41 +47,7 @@ database: "HealthCare"
 
 ---
 
-5. CHẠY SERVER
-
----
-
-Chạy lệnh:
-
-node server.js
-
-Server sẽ chạy tại:
-
-http://localhost:3000
-
----
-
-6. TEST API
-
----
-
-Tìm bác sĩ theo bệnh:
-GET http://localhost:3000/doctors?disease=Viêm họng
-
-Đặt lịch:
-POST http://localhost:3000/appointments
-
-Body JSON:
-{
-"patientID": 1,
-"doctorID": 1,
-"date": "2026-03-20",
-"time": "09:00"
-}
-
----
-
-7. LƯU Ý
+5. LƯU Ý
 
 ---
 
