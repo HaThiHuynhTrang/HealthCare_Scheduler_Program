@@ -114,7 +114,6 @@ CREATE TABLE `doctors` (
   PRIMARY KEY (`DoctorID`),
   KEY `UserID` (`UserID`),
   KEY `SpecialtyID` (`SpecialtyID`),
-  CONSTRAINT `doctors_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`),
   CONSTRAINT `doctors_ibfk_2` FOREIGN KEY (`SpecialtyID`) REFERENCES `specialties` (`SpecialtyID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
