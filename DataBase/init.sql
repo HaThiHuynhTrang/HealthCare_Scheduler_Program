@@ -186,4 +186,106 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+USE healthcare_db;
+
+-- USERS
+
+INSERT INTO users (FullName, Email, Password, Role)
+VALUES
+('Nguyen Van A', 'a@gmail.com', '123456', 'Patient'),
+('Tran Thi B', 'b@gmail.com', '123456', 'Patient'),
+('Le Van C', 'c@gmail.com', '123456', 'Patient'),
+('Pham Thi D', 'd@gmail.com', '123456', 'Patient'),
+('Hoang Van E', 'e@gmail.com', '123456', 'Doctor'),
+('Vo Thi F', 'f@gmail.com', '123456', 'Doctor'),
+('Dang Van G', 'g@gmail.com', '123456', 'Doctor'),
+('Nguyen Thi H', 'h@gmail.com', '123456', 'Patient'),
+('Tran Van I', 'i@gmail.com', '123456', 'Patient'),
+('Admin System', 'admin@gmail.com', 'admin123', 'Admin');
+
+
+
+-- SPECIALTIES
+
+INSERT INTO specialties (Name)
+VALUES
+('Cardiology'),
+('Dermatology'),
+('Neurology'),
+('Pediatrics'),
+('Orthopedics'),
+('Psychiatry'),
+('Oncology'),
+('ENT'),
+('Ophthalmology'),
+('General Medicine');
+
+
+
+-- DISEASES
+
+INSERT INTO diseases (Name)
+VALUES
+('Heart Disease'),
+('Skin Allergy'),
+('Migraine'),
+('Flu'),
+('Bone Fracture'),
+('Depression'),
+('Cancer'),
+('Ear Infection'),
+('Eye Infection'),
+('Diabetes');
+
+
+
+-- DOCTORS
+
+INSERT INTO doctors (UserID, SpecialtyID, ExperienceYears)
+VALUES
+(5, 1, 10),
+(6, 2, 7),
+(7, 3, 12),
+(5, 4, 8),
+(6, 5, 6),
+(7, 6, 9),
+(5, 7, 15),
+(6, 8, 11),
+(7, 9, 5),
+(5, 10, 13);
+
+
+
+-- DISEASE_SPECIALTIES
+
+INSERT INTO disease_specialties (DiseaseID, SpecialtyID)
+VALUES
+(1,1),
+(2,2),
+(3,3),
+(4,4),
+(5,5),
+(6,6),
+(7,7),
+(8,8),
+(9,9),
+(10,10);
+
+
+
+-- APPOINTMENTS
+
+INSERT INTO appointments
+(PatientID, DoctorID, AppointmentDate, AppointmentTime, Status)
+VALUES
+(1,1,'2026-05-20','08:00:00','Pending'),
+(2,2,'2026-05-21','09:00:00','Confirmed'),
+(3,3,'2026-05-22','10:00:00','Cancelled'),
+(4,4,'2026-05-23','11:00:00','Pending'),
+(8,5,'2026-05-24','13:00:00','Confirmed'),
+(9,6,'2026-05-25','14:00:00','Pending'),
+(1,7,'2026-05-26','15:00:00','Confirmed'),
+(2,8,'2026-05-27','16:00:00','Cancelled'),
+(3,9,'2026-05-28','17:00:00','Pending'),
+(4,10,'2026-05-29','18:00:00','Confirmed');
 -- Dump completed on 2026-03-20 21:53:39
